@@ -9,21 +9,6 @@ def select_k_random_points(points, k):
     random_selection = random.sample(points, k)
     return random_selection
 
-#generates k random colors to use for our legend
-def generate_random_colors(k):
-    random_colors = []
-
-    for _ in range(k):
-        # Generate random RGB values
-        r, g, b = [random.uniform(0, 1) for _ in range(3)]
-
-        # Convert RGB to hexadecimal
-        hex_color = "#{:02X}{:02X}{:02X}".format(int(r * 255), int(g * 255), int(b * 255))
-
-        random_colors.append(hex_color)
-
-    return random_colors
-
 # assigns clusters by determining which weighted_mean is closest to each point
 def assign_clusters(points, weighted_means):
     # points is an n by i matrix, weighted means is a k by i matrix

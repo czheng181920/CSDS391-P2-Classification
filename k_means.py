@@ -13,9 +13,6 @@ petal_length = df['petal_length']
 petal_width = df['petal_width']
 species = df['species']
 
-# Define colors for each species
-colors = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}
-
 def clustering_A(input, k):
     #k_means!
     clustered_array = cluster.seed_k(input, k)
@@ -77,6 +74,6 @@ if __name__ == "__main__":
     inputs = list(zip(sepal_length, sepal_width, petal_length, petal_width))
     k = 2
     #clustering_A(inputs, k)
-    # clustering_B(inputs, k)
+    clustering_B(inputs, k)
     # clustering_C(k)
-    clustering_D(k)
+    # clustering_D(k)
